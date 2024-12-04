@@ -1,0 +1,3611 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
+  api_host:'https://app.posthog.com',
+  persistence:'localStorage',
+  autocapture:false,
+  capture_pageview:false,
+  api_transport:'sendBeacon',
+  loaded: function(posthog) { 
+    posthog.identify("324cb532-6817-4552-b3aa-59f76a4b8732",{name:"masencio"});
+    posthog.capture("report_feature",{karate_version:"1.2.0",karate_meta:null});
+  }
+});
+</script>
+  
+    <title>FP_CL_HU90.ValidarToken</title>  
+  </head>
+  <body>   
+    <div id="root-container">
+      <div id="leftnav">
+                
+        <div>
+  <div class="nav-logo">
+    <a href="https://karatelabs.io">
+      <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">5</div>
+      <div id="nav-fail" class="bg-danger">3</div>
+    </div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>         
+  <div id="nav-date">
+    <div>2024-12-03 06:17:55 p. m.</div>
+  </div>        
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item passed">
+            <a href="#[1:12]"><span>[1:12]</span> <span>1. Solicitud de token con datos correctos</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[2:23]"><span>[2:23]</span> <span>2. Solicitud de token con datos incorrectos</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[3:34]"><span>[3:34]</span> <span>3. Solicitud de token con datos faltantes</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[4:45]"><span>[4:45]</span> <span>4. Consulta de API sin token</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[5:54]"><span>[5:54]</span> <span>5. Consulta de API con token inválido / expirado</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[6:63]"><span>[6:63]</span> <span>6. Consulta de API sin apikey</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[7:72]"><span>[7:72]</span> <span>7. Consulta de API con apikey incorrecto</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[8:82]"><span>[8:82]</span> <span>8. Consulta de API con token válido y apikey correcto</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">FP_CL_HU90/ValidarToken.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">Consultar APIs de forma segura HU-90</span>
+          <span class="feature-description"></span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1:12]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1:12]</span>
+                <span class="scenario-name">1. Solicitud de token con datos correctos</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>909</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1:12]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1:12]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def reqBodyCorrecto = read (&quot;classpath:Token/DatosCorrecto/request.json&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">3</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:12]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def reqBodyIncorrecto = read (&quot;classpath:Token/DatosIncorrecto/request.json&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:12]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.6">
+      <div class="step-ref bg-step">6</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def reqBodyIncompleto = read (&quot;classpath:Token/DatosIncorrecto/requestIncompleto.json&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:12]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.7">
+      <div class="step-ref bg-step">7</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def tokenExpirado = read (&quot;classpath:Token/DatosIncorrecto/idToken.json&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">5</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:12]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.8">
+      <div class="step-ref bg-step">8</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def tokenCorrecto = read (&quot;classpath:Token/DatosCorrecto/idToken.json&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:12]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.9">
+      <div class="step-ref bg-step">9</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def ApiKey =  read (&quot;classpath:Token/DatosCorrecto/xApiKey.json&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.13">
+      <div class="step-ref passed">13</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &#39;https://cognito-idp.us-east-1.amazonaws.com/&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref passed">14</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Content-Type = &#39;application/x-amz-json-1.1&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.15">
+      <div class="step-ref passed">15</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header X-Amz-Target = &#39;AWSCognitoIdentityProviderService.InitiateAuth&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.16">
+      <div class="step-ref passed">16</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Accept = &#39;*/*&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.17">
+      <div class="step-ref passed">17</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request reqBodyCorrecto</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.18">
+      <div class="step-ref passed">18</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>print reqBodyCorrecto</span>
+      </div>
+    </div>
+    <div class="time-cell passed">22</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.18">18:17:51.265 [print] {
+  &quot;AuthParameters&quot;: {
+    &quot;USERNAME&quot;: &quot;cyl_df@redb.ee&quot;,
+    &quot;PASSWORD&quot;: &quot;D4t4Cyl_df123.&quot;
+  },
+  &quot;AuthFlow&quot;: &quot;USER_PASSWORD_AUTH&quot;,
+  &quot;ClientId&quot;: &quot;3bhufgn8v2642tvg6ppc7857fl&quot;
+}
+ 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.19">
+      <div class="step-ref passed">19</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">868</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.19">18:17:51.267 request:
+1 &gt; POST https://cognito-idp.us-east-1.amazonaws.com/
+1 &gt; Content-Type: application/x-amz-json-1.1; charset=UTF-8
+1 &gt; X-Amz-Target: AWSCognitoIdentityProviderService.InitiateAuth
+1 &gt; Accept: */*
+1 &gt; Content-Length: 148
+1 &gt; Host: cognito-idp.us-east-1.amazonaws.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.4)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;AuthParameters&quot;:{&quot;USERNAME&quot;:&quot;cyl_df@redb.ee&quot;,&quot;PASSWORD&quot;:&quot;D4t4Cyl_df123.&quot;},&quot;AuthFlow&quot;:&quot;USER_PASSWORD_AUTH&quot;,&quot;ClientId&quot;:&quot;3bhufgn8v2642tvg6ppc7857fl&quot;}
+
+18:17:52.132 response time in milliseconds: 865
+1 &lt; 200
+1 &lt; Date: Tue, 03 Dec 2024 23:17:51 GMT
+1 &lt; Content-Type: application/x-amz-json-1.1
+1 &lt; Content-Length: 4073
+1 &lt; Connection: keep-alive
+1 &lt; x-amzn-RequestId: fcac0156-2d67-4009-b26e-54fef87f59b3
+{&quot;AuthenticationResult&quot;:{&quot;AccessToken&quot;:&quot;eyJraWQiOiIyb1dJMWxLeCtXMzI2RVcyWXY5cHhOSmJpVVd3T1g5VkhPeWFCbGtnTzVJPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJkNDM4YzRmOC1jMGUxLTcwYzItZTc2Yi05YTlmMjViY2I5YTIiLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV93a3NNNXpqcUoiLCJjbGllbnRfaWQiOiIzYmh1ZmduOHYyNjQydHZnNnBwYzc4NTdmbCIsIm9yaWdpbl9qdGkiOiJlYWY5NjNiYS1mNmY1LTQwYjAtYmFmNi01YjFjMTA5ODhjNWIiLCJldmVudF9pZCI6ImZjYWMwMTU2LTJkNjctNDAwOS1iMjZlLTU0ZmVmODdmNTliMyIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoiYXdzLmNvZ25pdG8uc2lnbmluLnVzZXIuYWRtaW4iLCJhdXRoX3RpbWUiOjE3MzMyNjc4NzEsImV4cCI6MTczMzI3MTQ3MSwiaWF0IjoxNzMzMjY3ODcxLCJqdGkiOiJhZDYyNDRlMy1lZWY2LTRhOTItODM4Mi0wZWU2MDhhNWM1Y2EiLCJ1c2VybmFtZSI6ImQ0MzhjNGY4LWMwZTEtNzBjMi1lNzZiLTlhOWYyNWJjYjlhMiJ9.AnkJ4d8Iy6vcJKd_yiHg3MKCwGAzq_l_Re35jCoVX4oFYrLk3dPu9OnJWjlFNWpwM2xc88HJWXdA6PtPvhV38DbLkyBn5OIvZhkAyEm7g75if0XVVo6aHSlHk_Nw7FkADIPEkhldxIheYmcX6GmdZazLQ0ZVayX9TY500OdppS0yI3muzjtgmgTzgUJjDGn0jqYvS74LkJuxgEHgRFlULIBkhyckEV1dETEVGeuUiAf2fJIbKI49QUab72SlCcAyZLdW8Oyky3OddX_i3cxjIPFAzYnCV58JFQRXEU0gRH5XHhvKyOPStMkY8hYa3exghRN3Pyia5jYQY2S-Tyd8pw&quot;,&quot;ExpiresIn&quot;:3600,&quot;IdToken&quot;:&quot;eyJraWQiOiJMU2lpRG4zQXZyXC85QVBvejhpRDk3cFBJNFNcL0RYVFdOSUpDVVFFdkNFSGc9IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiJkNDM4YzRmOC1jMGUxLTcwYzItZTc2Yi05YTlmMjViY2I5YTIiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfd2tzTTV6anFKIiwiY29nbml0bzp1c2VybmFtZSI6ImQ0MzhjNGY4LWMwZTEtNzBjMi1lNzZiLTlhOWYyNWJjYjlhMiIsIm9yaWdpbl9qdGkiOiJlYWY5NjNiYS1mNmY1LTQwYjAtYmFmNi01YjFjMTA5ODhjNWIiLCJhdWQiOiIzYmh1ZmduOHYyNjQydHZnNnBwYzc4NTdmbCIsImV2ZW50X2lkIjoiZmNhYzAxNTYtMmQ2Ny00MDA5LWIyNmUtNTRmZWY4N2Y1OWIzIiwidG9rZW5fdXNlIjoiaWQiLCJhdXRoX3RpbWUiOjE3MzMyNjc4NzEsImV4cCI6MTczMzI3MTQ3MSwiaWF0IjoxNzMzMjY3ODcxLCJqdGkiOiI0MTA3MjEyMi0wNDBjLTQ1NTUtOWUwOS0wZWUzZDAxYWFiMmMiLCJlbWFpbCI6ImN5bF9kZkByZWRiLmVlIn0.Xgq-vyvB4ooN1roOgdiGqaAmCvDyt1Js9Hsuae-HiSx8s5Iqkr5H20gIJfC7tWg-d5xSd_nPy8_5hLb0C8QyK_bzLS6s-RAGwYCwg91Iat-cWw1Ejs60wm7sWut3n94XJxl_KWPdrNhNOjUuJMi3aFB-y7FBsLw8njZJuS8Aq6Vobwtd-DWeDXEC1BwyyrMtB-JVb2U14AeRVpmcsnN1tuV3WAaqrkdBXyEZ2MDqrEdRlI8hLpNkQGxrhzcNLyVnrT0OtVg-gpaQTMmPB4mh6x_WTA7cNqFQcMzH3sfe4J1LhE0fd-_-fjHKAtc0DY5471vhBFSALDc0mCFlrtaJdg&quot;,&quot;RefreshToken&quot;:&quot;eyJjdHkiOiJKV1QiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiUlNBLU9BRVAifQ.yw8iR9dLekt-vdB4PRfTlwtvWxGvKesI8mQHCsPuaxIQcBc71MJb5O1JC3oxb3S8H63mevEC0JNONKo0RPa5ZJ2y_Wrm-JWGdsxIR8By1cyGQI2eIucWfwz8J-cGz9yBceC00n1_PLk4Fj4BxkPrWLCoSkJ1Zh-JU0x3Cs3iuu8_vDAkFaMv3dxc_qCrw7WApmLN3h7FFjJc-6K0WDB9ZSqhEQ_l6Ez9Kxb9oHV2YJvCWGiyD927Tx8V_HFpbgDHGt5KukYPoHhUi_YjfXp2ojAq65ZE3uZ1FRQrpFopXRrQ8BV6Rii6DnPgpsulrrlWxkZt3cqdgnLl-CVAiWZeYg.qIXsF8wtGi3fcj4C.tMXm23CboIHAuQBfJR0kKzqBqKYUrhDXaSPATUc82DYvyb4uNrnHUemwUvYA4mYbAzbm-dASvRTIFPMECqsg-ZvAb1xQQKZVYs1eh9wiNF_gClgto6IJi_FIHermN6AtzZbI_oauF3DgTeshSXCgbGa8K9ujHF-KwukP3wPKXywBigILIcfisuyjJ6sVESfo1JwRBbbz-e57BXwwupOjvdaf9pg9vmnKKe4AQm0E2trfi2pijbvyDnSZWCgTuISli60UE-ZeeAk_BJ1B9JOkRJIq_Cj4ZSpVERirh79uk7rprgsNfSO0YJ1uEOKaGJLRpu_nXuOwgvHs_0F2_qjh5vuwuRPj6FLanax6_yAluyURiPXgeBMVr_kdW61sVDihl8r2iKAFmXulLKu8jYsb3p2sIWVZXWOqS74VAelSLr1MAuefIbP1QuqW9kZSKNAAr9MDpl5JhNpgVbGR0_UPgFaHnREjiPj_zubrylCovPT6Um9a-NQdpL-dKDUn82uu2IGU4uyNpu09wBfX6VUSIKAbiQIxRQaozqaHb_gyPko2secLowt8KX96pmq6NPY5aHtJKA-2maUkPQ8ox9_1FvRxGtNplDLy8dx_xzofbx7uTmyfAuaKM9WNoppb-gtoniYJpoaf-x7KrIFtrKZi_rpQKqqyQeqELt-VfsLUAq8fbfFQPGbeg1eqaV_tRdUW5KPOt07Tw_zyXVd_HHAXoj4L05uNS5dZbODCu1u5pCGAn155glYkpX9GfyEGw1uWQstJRAAhTXn3boqBJNUv5jm7hUKlIN4QsFdQV1M0g5KCOmeegDsOMX6KNId2Z5JCGXGJ4zgk-PZmm-0ITF0w9W5nQ4hGHWO-QZrCnjBrrqOUHkdKPzkR78Sx1ukqOw02wG3FIAZgibq_470gZCENSzOTlgP2JTHFEwMpGHEBbPG255d9kOji1MpyCWkPH8KGsCoAbalv1JEqqr7WbU7hUQS9M_cDpOT9X-pGBpb0l7083v0RZpQArtJ5nL-vAqm2E6am7fW2H-1utbuGJfnyp_dIhuHnFyF4spkjtlLSUMOcBkr6ZRiCEapBbOXOG8dKHZ-MgBjVTP0Jbu76ckjZT0Jrs1GiFMSHDlZuytrVnEdQQ_CIb8iuq6batNGZOEifM8bgdhTRiCEw21tHlI_T21irYMvK2yqm0oKoDvxcoyTaOWOiRiS4Xapni5jU2-bB4E5F14KbtR2NslOGX0DNImEDT8BweFKwBFunuPM-eFJSrBzi7S9XdwgWLL5Z7ORn2AndcBkUSlA0JSWRwJbIyulv6t6eqei2nTxbQe1Rh91CNJNay7qF1yvkVA.pvHXfKeZ2E-3rBHGrQgbSQ&quot;,&quot;TokenType&quot;:&quot;Bearer&quot;},&quot;ChallengeParameters&quot;:{}}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.20">
+      <div class="step-ref passed">20</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.21">
+      <div class="step-ref passed">21</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>print response</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.21">18:17:52.136 [print] {
+  &quot;AuthenticationResult&quot;: {
+    &quot;AccessToken&quot;: &quot;eyJraWQiOiIyb1dJMWxLeCtXMzI2RVcyWXY5cHhOSmJpVVd3T1g5VkhPeWFCbGtnTzVJPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJkNDM4YzRmOC1jMGUxLTcwYzItZTc2Yi05YTlmMjViY2I5YTIiLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV93a3NNNXpqcUoiLCJjbGllbnRfaWQiOiIzYmh1ZmduOHYyNjQydHZnNnBwYzc4NTdmbCIsIm9yaWdpbl9qdGkiOiJlYWY5NjNiYS1mNmY1LTQwYjAtYmFmNi01YjFjMTA5ODhjNWIiLCJldmVudF9pZCI6ImZjYWMwMTU2LTJkNjctNDAwOS1iMjZlLTU0ZmVmODdmNTliMyIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoiYXdzLmNvZ25pdG8uc2lnbmluLnVzZXIuYWRtaW4iLCJhdXRoX3RpbWUiOjE3MzMyNjc4NzEsImV4cCI6MTczMzI3MTQ3MSwiaWF0IjoxNzMzMjY3ODcxLCJqdGkiOiJhZDYyNDRlMy1lZWY2LTRhOTItODM4Mi0wZWU2MDhhNWM1Y2EiLCJ1c2VybmFtZSI6ImQ0MzhjNGY4LWMwZTEtNzBjMi1lNzZiLTlhOWYyNWJjYjlhMiJ9.AnkJ4d8Iy6vcJKd_yiHg3MKCwGAzq_l_Re35jCoVX4oFYrLk3dPu9OnJWjlFNWpwM2xc88HJWXdA6PtPvhV38DbLkyBn5OIvZhkAyEm7g75if0XVVo6aHSlHk_Nw7FkADIPEkhldxIheYmcX6GmdZazLQ0ZVayX9TY500OdppS0yI3muzjtgmgTzgUJjDGn0jqYvS74LkJuxgEHgRFlULIBkhyckEV1dETEVGeuUiAf2fJIbKI49QUab72SlCcAyZLdW8Oyky3OddX_i3cxjIPFAzYnCV58JFQRXEU0gRH5XHhvKyOPStMkY8hYa3exghRN3Pyia5jYQY2S-Tyd8pw&quot;,
+    &quot;ExpiresIn&quot;: 3600,
+    &quot;IdToken&quot;: &quot;eyJraWQiOiJMU2lpRG4zQXZyXC85QVBvejhpRDk3cFBJNFNcL0RYVFdOSUpDVVFFdkNFSGc9IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiJkNDM4YzRmOC1jMGUxLTcwYzItZTc2Yi05YTlmMjViY2I5YTIiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfd2tzTTV6anFKIiwiY29nbml0bzp1c2VybmFtZSI6ImQ0MzhjNGY4LWMwZTEtNzBjMi1lNzZiLTlhOWYyNWJjYjlhMiIsIm9yaWdpbl9qdGkiOiJlYWY5NjNiYS1mNmY1LTQwYjAtYmFmNi01YjFjMTA5ODhjNWIiLCJhdWQiOiIzYmh1ZmduOHYyNjQydHZnNnBwYzc4NTdmbCIsImV2ZW50X2lkIjoiZmNhYzAxNTYtMmQ2Ny00MDA5LWIyNmUtNTRmZWY4N2Y1OWIzIiwidG9rZW5fdXNlIjoiaWQiLCJhdXRoX3RpbWUiOjE3MzMyNjc4NzEsImV4cCI6MTczMzI3MTQ3MSwiaWF0IjoxNzMzMjY3ODcxLCJqdGkiOiI0MTA3MjEyMi0wNDBjLTQ1NTUtOWUwOS0wZWUzZDAxYWFiMmMiLCJlbWFpbCI6ImN5bF9kZkByZWRiLmVlIn0.Xgq-vyvB4ooN1roOgdiGqaAmCvDyt1Js9Hsuae-HiSx8s5Iqkr5H20gIJfC7tWg-d5xSd_nPy8_5hLb0C8QyK_bzLS6s-RAGwYCwg91Iat-cWw1Ejs60wm7sWut3n94XJxl_KWPdrNhNOjUuJMi3aFB-y7FBsLw8njZJuS8Aq6Vobwtd-DWeDXEC1BwyyrMtB-JVb2U14AeRVpmcsnN1tuV3WAaqrkdBXyEZ2MDqrEdRlI8hLpNkQGxrhzcNLyVnrT0OtVg-gpaQTMmPB4mh6x_WTA7cNqFQcMzH3sfe4J1LhE0fd-_-fjHKAtc0DY5471vhBFSALDc0mCFlrtaJdg&quot;,
+    &quot;RefreshToken&quot;: &quot;eyJjdHkiOiJKV1QiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiUlNBLU9BRVAifQ.yw8iR9dLekt-vdB4PRfTlwtvWxGvKesI8mQHCsPuaxIQcBc71MJb5O1JC3oxb3S8H63mevEC0JNONKo0RPa5ZJ2y_Wrm-JWGdsxIR8By1cyGQI2eIucWfwz8J-cGz9yBceC00n1_PLk4Fj4BxkPrWLCoSkJ1Zh-JU0x3Cs3iuu8_vDAkFaMv3dxc_qCrw7WApmLN3h7FFjJc-6K0WDB9ZSqhEQ_l6Ez9Kxb9oHV2YJvCWGiyD927Tx8V_HFpbgDHGt5KukYPoHhUi_YjfXp2ojAq65ZE3uZ1FRQrpFopXRrQ8BV6Rii6DnPgpsulrrlWxkZt3cqdgnLl-CVAiWZeYg.qIXsF8wtGi3fcj4C.tMXm23CboIHAuQBfJR0kKzqBqKYUrhDXaSPATUc82DYvyb4uNrnHUemwUvYA4mYbAzbm-dASvRTIFPMECqsg-ZvAb1xQQKZVYs1eh9wiNF_gClgto6IJi_FIHermN6AtzZbI_oauF3DgTeshSXCgbGa8K9ujHF-KwukP3wPKXywBigILIcfisuyjJ6sVESfo1JwRBbbz-e57BXwwupOjvdaf9pg9vmnKKe4AQm0E2trfi2pijbvyDnSZWCgTuISli60UE-ZeeAk_BJ1B9JOkRJIq_Cj4ZSpVERirh79uk7rprgsNfSO0YJ1uEOKaGJLRpu_nXuOwgvHs_0F2_qjh5vuwuRPj6FLanax6_yAluyURiPXgeBMVr_kdW61sVDihl8r2iKAFmXulLKu8jYsb3p2sIWVZXWOqS74VAelSLr1MAuefIbP1QuqW9kZSKNAAr9MDpl5JhNpgVbGR0_UPgFaHnREjiPj_zubrylCovPT6Um9a-NQdpL-dKDUn82uu2IGU4uyNpu09wBfX6VUSIKAbiQIxRQaozqaHb_gyPko2secLowt8KX96pmq6NPY5aHtJKA-2maUkPQ8ox9_1FvRxGtNplDLy8dx_xzofbx7uTmyfAuaKM9WNoppb-gtoniYJpoaf-x7KrIFtrKZi_rpQKqqyQeqELt-VfsLUAq8fbfFQPGbeg1eqaV_tRdUW5KPOt07Tw_zyXVd_HHAXoj4L05uNS5dZbODCu1u5pCGAn155glYkpX9GfyEGw1uWQstJRAAhTXn3boqBJNUv5jm7hUKlIN4QsFdQV1M0g5KCOmeegDsOMX6KNId2Z5JCGXGJ4zgk-PZmm-0ITF0w9W5nQ4hGHWO-QZrCnjBrrqOUHkdKPzkR78Sx1ukqOw02wG3FIAZgibq_470gZCENSzOTlgP2JTHFEwMpGHEBbPG255d9kOji1MpyCWkPH8KGsCoAbalv1JEqqr7WbU7hUQS9M_cDpOT9X-pGBpb0l7083v0RZpQArtJ5nL-vAqm2E6am7fW2H-1utbuGJfnyp_dIhuHnFyF4spkjtlLSUMOcBkr6ZRiCEapBbOXOG8dKHZ-MgBjVTP0Jbu76ckjZT0Jrs1GiFMSHDlZuytrVnEdQQ_CIb8iuq6batNGZOEifM8bgdhTRiCEw21tHlI_T21irYMvK2yqm0oKoDvxcoyTaOWOiRiS4Xapni5jU2-bB4E5F14KbtR2NslOGX0DNImEDT8BweFKwBFunuPM-eFJSrBzi7S9XdwgWLL5Z7ORn2AndcBkUSlA0JSWRwJbIyulv6t6eqei2nTxbQe1Rh91CNJNay7qF1yvkVA.pvHXfKeZ2E-3rBHGrQgbSQ&quot;,
+    &quot;TokenType&quot;: &quot;Bearer&quot;
+  },
+  &quot;ChallengeParameters&quot;: {
+  }
+}
+ 
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[2:23]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[2:23]</span>
+                <span class="scenario-name">2. Solicitud de token con datos incorrectos</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>602</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[2:23]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[2:23]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def reqBodyCorrecto = read (&quot;classpath:Token/DatosCorrecto/request.json&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2:23]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def reqBodyIncorrecto = read (&quot;classpath:Token/DatosIncorrecto/request.json&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2:23]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.6">
+      <div class="step-ref bg-step">6</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def reqBodyIncompleto = read (&quot;classpath:Token/DatosIncorrecto/requestIncompleto.json&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2:23]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.7">
+      <div class="step-ref bg-step">7</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def tokenExpirado = read (&quot;classpath:Token/DatosIncorrecto/idToken.json&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2:23]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.8">
+      <div class="step-ref bg-step">8</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def tokenCorrecto = read (&quot;classpath:Token/DatosCorrecto/idToken.json&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2:23]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.9">
+      <div class="step-ref bg-step">9</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def ApiKey =  read (&quot;classpath:Token/DatosCorrecto/xApiKey.json&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.24">
+      <div class="step-ref passed">24</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &#39;https://cognito-idp.us-east-1.amazonaws.com/&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.25">
+      <div class="step-ref passed">25</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Content-Type = &#39;application/x-amz-json-1.1&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.26">
+      <div class="step-ref passed">26</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header X-Amz-Target = &#39;AWSCognitoIdentityProviderService.InitiateAuth&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.27">
+      <div class="step-ref passed">27</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Accept = &#39;*/*&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.28">
+      <div class="step-ref passed">28</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request reqBodyIncorrecto</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.29">
+      <div class="step-ref passed">29</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>print reqBodyIncorrecto</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.29">18:17:52.159 [print] {
+  &quot;AuthParameters&quot;: {
+    &quot;USERNAME&quot;: &quot;noexiste@redb.ee&quot;,
+    &quot;PASSWORD&quot;: &quot;123456&quot;
+  },
+  &quot;AuthFlow&quot;: &quot;USER_PASSWORD_AUTH&quot;,
+  &quot;ClientId&quot;: &quot;3bhufgn8v2642tvg6ppc7857fl&quot;
+}
+ 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.30">
+      <div class="step-ref passed">30</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">595</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.30">18:17:52.161 request:
+1 &gt; POST https://cognito-idp.us-east-1.amazonaws.com/
+1 &gt; Content-Type: application/x-amz-json-1.1; charset=UTF-8
+1 &gt; X-Amz-Target: AWSCognitoIdentityProviderService.InitiateAuth
+1 &gt; Accept: */*
+1 &gt; Content-Length: 142
+1 &gt; Host: cognito-idp.us-east-1.amazonaws.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.4)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;AuthParameters&quot;:{&quot;USERNAME&quot;:&quot;noexiste@redb.ee&quot;,&quot;PASSWORD&quot;:&quot;123456&quot;},&quot;AuthFlow&quot;:&quot;USER_PASSWORD_AUTH&quot;,&quot;ClientId&quot;:&quot;3bhufgn8v2642tvg6ppc7857fl&quot;}
+
+18:17:52.747 response time in milliseconds: 586
+1 &lt; 400
+1 &lt; Date: Tue, 03 Dec 2024 23:17:52 GMT
+1 &lt; Content-Type: application/x-amz-json-1.1
+1 &lt; Content-Length: 79
+1 &lt; Connection: keep-alive
+1 &lt; x-amzn-RequestId: 60fba2c5-cdf3-4c62-8ea1-316f8827f2a9
+1 &lt; x-amzn-ErrorType: NotAuthorizedException:
+1 &lt; x-amzn-ErrorMessage: Incorrect username or password.
+{&quot;__type&quot;:&quot;NotAuthorizedException&quot;,&quot;message&quot;:&quot;Incorrect username or password.&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.31">
+      <div class="step-ref passed">31</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 400</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.32">
+      <div class="step-ref passed">32</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>print response</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.32">18:17:52.756 [print] {
+  &quot;__type&quot;: &quot;NotAuthorizedException&quot;,
+  &quot;message&quot;: &quot;Incorrect username or password.&quot;
+}
+ 
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[3:34]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[3:34]</span>
+                <span class="scenario-name">3. Solicitud de token con datos faltantes</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>323</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[3:34]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[3:34]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def reqBodyCorrecto = read (&quot;classpath:Token/DatosCorrecto/request.json&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:34]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def reqBodyIncorrecto = read (&quot;classpath:Token/DatosIncorrecto/request.json&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:34]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.6">
+      <div class="step-ref bg-step">6</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def reqBodyIncompleto = read (&quot;classpath:Token/DatosIncorrecto/requestIncompleto.json&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:34]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.7">
+      <div class="step-ref bg-step">7</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def tokenExpirado = read (&quot;classpath:Token/DatosIncorrecto/idToken.json&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:34]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.8">
+      <div class="step-ref bg-step">8</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def tokenCorrecto = read (&quot;classpath:Token/DatosCorrecto/idToken.json&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:34]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.9">
+      <div class="step-ref bg-step">9</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def ApiKey =  read (&quot;classpath:Token/DatosCorrecto/xApiKey.json&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.35">
+      <div class="step-ref passed">35</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &#39;https://cognito-idp.us-east-1.amazonaws.com/&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.36">
+      <div class="step-ref passed">36</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Content-Type = &#39;application/x-amz-json-1.1&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.37">
+      <div class="step-ref passed">37</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header X-Amz-Target = &#39;AWSCognitoIdentityProviderService.InitiateAuth&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.38">
+      <div class="step-ref passed">38</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Accept = &#39;*/*&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.39">
+      <div class="step-ref passed">39</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request reqBodyIncompleto</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.40">
+      <div class="step-ref passed">40</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>print reqBodyIncompleto</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.40">18:17:52.776 [print] {
+  &quot;AuthParameters&quot;: {
+    &quot;PASSWORD&quot;: &quot;123456&quot;
+  },
+  &quot;AuthFlow&quot;: &quot;USER_PASSWORD_AUTH&quot;
+}
+ 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.41">
+      <div class="step-ref passed">41</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">318</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.41">18:17:52.778 request:
+1 &gt; POST https://cognito-idp.us-east-1.amazonaws.com/
+1 &gt; Content-Type: application/x-amz-json-1.1; charset=UTF-8
+1 &gt; X-Amz-Target: AWSCognitoIdentityProviderService.InitiateAuth
+1 &gt; Accept: */*
+1 &gt; Content-Length: 72
+1 &gt; Host: cognito-idp.us-east-1.amazonaws.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.4)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;AuthParameters&quot;:{&quot;PASSWORD&quot;:&quot;123456&quot;},&quot;AuthFlow&quot;:&quot;USER_PASSWORD_AUTH&quot;}
+
+18:17:53.094 response time in milliseconds: 316
+1 &lt; 400
+1 &lt; Date: Tue, 03 Dec 2024 23:17:52 GMT
+1 &lt; Content-Type: application/x-amz-json-1.1
+1 &lt; Content-Length: 158
+1 &lt; Connection: keep-alive
+1 &lt; x-amzn-RequestId: 3b7e903e-f9b6-4deb-948c-c62dbd27e9ed
+1 &lt; x-amzn-ErrorType: InvalidParameterException:
+1 &lt; x-amzn-ErrorMessage: 1 validation error detected: Value null at &#39;clientId&#39; failed to satisfy constraint: Member must not be null
+{&quot;__type&quot;:&quot;InvalidParameterException&quot;,&quot;message&quot;:&quot;1 validation error detected: Value null at &#39;clientId&#39; failed to satisfy constraint: Member must not be null&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.42">
+      <div class="step-ref passed">42</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 400</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.43">
+      <div class="step-ref passed">43</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>print response</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.43">18:17:53.095 [print] {
+  &quot;__type&quot;: &quot;InvalidParameterException&quot;,
+  &quot;message&quot;: &quot;1 validation error detected: Value null at &#39;clientId&#39; failed to satisfy constraint: Member must not be null&quot;
+}
+ 
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[4:45]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[4:45]</span>
+                <span class="scenario-name">4. Consulta de API sin token</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>361</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[4:45]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[4:45]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def reqBodyCorrecto = read (&quot;classpath:Token/DatosCorrecto/request.json&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[4:45]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def reqBodyIncorrecto = read (&quot;classpath:Token/DatosIncorrecto/request.json&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[4:45]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.6">
+      <div class="step-ref bg-step">6</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def reqBodyIncompleto = read (&quot;classpath:Token/DatosIncorrecto/requestIncompleto.json&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[4:45]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.7">
+      <div class="step-ref bg-step">7</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def tokenExpirado = read (&quot;classpath:Token/DatosIncorrecto/idToken.json&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[4:45]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.8">
+      <div class="step-ref bg-step">8</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def tokenCorrecto = read (&quot;classpath:Token/DatosCorrecto/idToken.json&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[4:45]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.9">
+      <div class="step-ref bg-step">9</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def ApiKey =  read (&quot;classpath:Token/DatosCorrecto/xApiKey.json&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.46">
+      <div class="step-ref passed">46</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &#39;https://7tmni6kk16.execute-api.us-east-1.amazonaws.com/dev/api/v1/transactionsAggregator?status=INCONSISTENTE&amp;status=REPETIDA&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.47">
+      <div class="step-ref passed">47</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Authorization = &#39;&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.48">
+      <div class="step-ref passed">48</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header x-api-key = ApiKey</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.49">
+      <div class="step-ref passed">49</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Accept = &#39;*/*&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.50">
+      <div class="step-ref passed">50</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">350</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.50">18:17:53.118 request:
+1 &gt; GET https://7tmni6kk16.execute-api.us-east-1.amazonaws.com/dev/api/v1/transactionsAggregator?status=INCONSISTENTE&amp;status=REPETIDA
+1 &gt; Authorization: 
+1 &gt; x-api-key: LpnIYryW2n7UDv7wsFo6H4x9Nj61AjXmEAwKxVej
+1 &gt; Accept: */*
+1 &gt; Host: 7tmni6kk16.execute-api.us-east-1.amazonaws.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.4)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+18:17:53.463 response time in milliseconds: 345
+1 &lt; 401
+1 &lt; Date: Tue, 03 Dec 2024 23:17:53 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Content-Length: 26
+1 &lt; Connection: keep-alive
+1 &lt; x-amzn-RequestId: 4bb0936a-e28a-4c75-a445-819e96ea7c7d
+1 &lt; x-amzn-ErrorType: UnauthorizedException
+1 &lt; x-amz-apigw-id: CPOxQFxaIAMEb_g=
+{&quot;message&quot;:&quot;Unauthorized&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.51">
+      <div class="step-ref passed">51</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 401</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.52">
+      <div class="step-ref passed">52</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>print response</span>
+      </div>
+    </div>
+    <div class="time-cell passed">4</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.52">18:17:53.470 [print] {
+  &quot;message&quot;: &quot;Unauthorized&quot;
+}
+ 
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[5:54]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[5:54]</span>
+                <span class="scenario-name">5. Consulta de API con token inválido / expirado</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>373</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[5:54]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[5:54]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def reqBodyCorrecto = read (&quot;classpath:Token/DatosCorrecto/request.json&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">4</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5:54]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def reqBodyIncorrecto = read (&quot;classpath:Token/DatosIncorrecto/request.json&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5:54]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.6">
+      <div class="step-ref bg-step">6</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def reqBodyIncompleto = read (&quot;classpath:Token/DatosIncorrecto/requestIncompleto.json&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5:54]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.7">
+      <div class="step-ref bg-step">7</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def tokenExpirado = read (&quot;classpath:Token/DatosIncorrecto/idToken.json&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5:54]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.8">
+      <div class="step-ref bg-step">8</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def tokenCorrecto = read (&quot;classpath:Token/DatosCorrecto/idToken.json&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5:54]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.9">
+      <div class="step-ref bg-step">9</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def ApiKey =  read (&quot;classpath:Token/DatosCorrecto/xApiKey.json&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.55">
+      <div class="step-ref passed">55</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &#39;https://7tmni6kk16.execute-api.us-east-1.amazonaws.com/dev/api/v1/transactionsAggregator?status=INCONSISTENTE&amp;status=REPETIDA&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.56">
+      <div class="step-ref passed">56</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Authorization = tokenExpirado</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.57">
+      <div class="step-ref passed">57</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header x-api-key = ApiKey</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.58">
+      <div class="step-ref passed">58</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Accept = &#39;*/*&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.59">
+      <div class="step-ref passed">59</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">363</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.59">18:17:53.497 request:
+1 &gt; GET https://7tmni6kk16.execute-api.us-east-1.amazonaws.com/dev/api/v1/transactionsAggregator?status=INCONSISTENTE&amp;status=REPETIDA
+1 &gt; Authorization: eyJraWQiOiJMU2lpRG4zQXZyXC85QVBvejhpRDk3cFBJNFNcL0RYVFdOSUpDVVFFdkNFSGc9IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiJkNDM4YzRmOC1jMGUxLTcwYzItZTc2Yi05YTlmMjViY2I5YTIiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfd2tzTTV6anFKIiwiY29nbml0bzp1c2VybmFtZSI6ImQ0MzhjNGY4LWMwZTEtNzBjMi1lNzZiLTlhOWYyNWJjYjlhMiIsIm9yaWdpbl9qdGkiOiI3Mjg0MzllMS02MmJmLTRkNDAtOTY5Zi02NTgyNDllODY3ZmYiLCJhdWQiOiIzYmh1ZmduOHYyNjQydHZnNnBwYzc4NTdmbCIsImV2ZW50X2lkIjoiODJlOWY1YTEtMTUzMy00MDUwLTliYTItNGUzNzlmMTBkOWNkIiwidG9rZW5fdXNlIjoiaWQiLCJhdXRoX3RpbWUiOjE2OTI5ODY0MjksImV4cCI6MTY5Mjk5MDAyOSwiaWF0IjoxNjkyOTg2NDI5LCJqdGkiOiI5NTQ2OTAxMy1iMjBlLTRlZDktYTRhOS0wOTM1YWFkNmFhZjgiLCJlbWFpbCI6ImN5bF9kZkByZWRiLmVlIn0.jhuF-RGZj4SmqEX5MjEnWejBX26YDczvfYQXbN4A8enuxFMk33nT4XMkDCE5dXFj5B_s2hl8s76f5Q4p7nRAFzS_6hulh2EvTvxlLafYyAZgLJ_MtUIq5LO6_E6Kduo1FSpCx7-cROYt2VNuvFGhg3DI80l7QDRhEEp9SZCOHOQzqH3uOunYejFxf03agwOBUfaKmDBF6vsNKWPNytnLCBx2fcBoEi1ZaYS_eIhISQ8I8H6Ev7g-uR5eUTRzxWAsR-ZjLHd5TVqvEt76OHE8M1SEsxRd21x9zBuIc1daS1gYcaxGooLQzybqwyTjsxrToJ-SGj_xtjQAtKrgAJRQ9w
+1 &gt; x-api-key: LpnIYryW2n7UDv7wsFo6H4x9Nj61AjXmEAwKxVej
+1 &gt; Accept: */*
+1 &gt; Host: 7tmni6kk16.execute-api.us-east-1.amazonaws.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.4)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+18:17:53.857 response time in milliseconds: 359
+1 &lt; 401
+1 &lt; Date: Tue, 03 Dec 2024 23:17:53 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Content-Length: 44
+1 &lt; Connection: keep-alive
+1 &lt; x-amzn-RequestId: c1015342-f3c6-4fca-86a9-7a930122f535
+1 &lt; x-amzn-ErrorType: UnauthorizedException
+1 &lt; x-amz-apigw-id: CPOxUEfvoAMEOaA=
+{&quot;message&quot;:&quot;The incoming token has expired&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.60">
+      <div class="step-ref passed">60</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 401</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.61">
+      <div class="step-ref passed">61</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>print response</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.61">18:17:53.858 [print] {
+  &quot;message&quot;: &quot;The incoming token has expired&quot;
+}
+ 
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[6:63]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[6:63]</span>
+                <span class="scenario-name">6. Consulta de API sin apikey</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>348</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[6:63]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[6:63]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def reqBodyCorrecto = read (&quot;classpath:Token/DatosCorrecto/request.json&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[6:63]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def reqBodyIncorrecto = read (&quot;classpath:Token/DatosIncorrecto/request.json&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[6:63]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.6">
+      <div class="step-ref bg-step">6</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def reqBodyIncompleto = read (&quot;classpath:Token/DatosIncorrecto/requestIncompleto.json&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[6:63]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.7">
+      <div class="step-ref bg-step">7</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def tokenExpirado = read (&quot;classpath:Token/DatosIncorrecto/idToken.json&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[6:63]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.8">
+      <div class="step-ref bg-step">8</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def tokenCorrecto = read (&quot;classpath:Token/DatosCorrecto/idToken.json&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[6:63]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.9">
+      <div class="step-ref bg-step">9</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def ApiKey =  read (&quot;classpath:Token/DatosCorrecto/xApiKey.json&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.64">
+      <div class="step-ref passed">64</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &#39;https://7tmni6kk16.execute-api.us-east-1.amazonaws.com/dev/api/v1/transactionsAggregator?status=INCONSISTENTE&amp;status=REPETIDA&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.65">
+      <div class="step-ref passed">65</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Authorization = tokenCorrecto</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.66">
+      <div class="step-ref passed">66</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header x-api-key = &#39;&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.67">
+      <div class="step-ref passed">67</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Accept = &#39;*/*&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.68">
+      <div class="step-ref passed">68</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">341</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.68">18:17:53.885 request:
+1 &gt; GET https://7tmni6kk16.execute-api.us-east-1.amazonaws.com/dev/api/v1/transactionsAggregator?status=INCONSISTENTE&amp;status=REPETIDA
+1 &gt; Authorization: eyJraWQiOiJMU2lpRG4zQXZyXC85QVBvejhpRDk3cFBJNFNcL0RYVFdOSUpDVVFFdkNFSGc9IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiJkNDM4YzRmOC1jMGUxLTcwYzItZTc2Yi05YTlmMjViY2I5YTIiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfd2tzTTV6anFKIiwiY29nbml0bzp1c2VybmFtZSI6ImQ0MzhjNGY4LWMwZTEtNzBjMi1lNzZiLTlhOWYyNWJjYjlhMiIsIm9yaWdpbl9qdGkiOiI0N2MzM2ZhNC01NDM5LTQzZDAtYTBiNi1hYjVmNGRhNzMyNTgiLCJhdWQiOiIzYmh1ZmduOHYyNjQydHZnNnBwYzc4NTdmbCIsImV2ZW50X2lkIjoiOWNhZjE0ZjMtNmQwMS00NDI0LTkwNzMtYmE3MDY0NjNjOTU1IiwidG9rZW5fdXNlIjoiaWQiLCJhdXRoX3RpbWUiOjE3MTk0MjUwNDMsImV4cCI6MTcxOTQyODY0MywiaWF0IjoxNzE5NDI1MDQzLCJqdGkiOiJjOWI5MWM4OS1iZTlkLTRiMWYtYWIxNC0xMjc3MzI5YmQ4NzEiLCJlbWFpbCI6ImN5bF9kZkByZWRiLmVlIn0.rs4oneBSL8fzaTQnKXizoOM9gki0vqxPC0YbdzIar3aUk6XvU49QUj2S1pOD3TBKQUuA7QRZTu-gM3boYv5rxeuJbb7tYcrmUoX689MTYM2VDV6e_oiqIMOF_cX6qtsgLI_lStPfHavqyz8PH1tp4ieG0_YjMlQ3_sEDiwQf_R2_gBdJjWCEbtNTrErLa9R7DI5-WjU1AIy6WTdR2xUYWi2dC9ksUQjD4wpSGNcuCXtONTkBz5wSJliwJTwNu4ez2QtnCJztVMxeGrNEW7il4ZVtuFUe9MHb9NJ-9zGzM6iTUhLUHj4qChOKcJX-be_GXJscTszF1-MoqYqz3i28NA
+1 &gt; x-api-key: 
+1 &gt; Accept: */*
+1 &gt; Host: 7tmni6kk16.execute-api.us-east-1.amazonaws.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.4)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+18:17:54.222 response time in milliseconds: 337
+1 &lt; 401
+1 &lt; Date: Tue, 03 Dec 2024 23:17:54 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Content-Length: 44
+1 &lt; Connection: keep-alive
+1 &lt; x-amzn-RequestId: f0321a15-7d4b-4bda-91e3-490b564966dc
+1 &lt; x-amzn-ErrorType: UnauthorizedException
+1 &lt; x-amz-apigw-id: CPOxYH63IAMEgmg=
+{&quot;message&quot;:&quot;The incoming token has expired&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.69">
+      <div class="step-ref failed">69</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 403</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.69">18:17:54.223 classpath:FP_CL_HU90/ValidarToken.feature:69
+Then status 403
+status code was: 401, expected: 403, response time in milliseconds: 337, url: https://7tmni6kk16.execute-api.us-east-1.amazonaws.com/dev/api/v1/transactionsAggregator?status=INCONSISTENTE&amp;status=REPETIDA, response: 
+{&quot;message&quot;:&quot;The incoming token has expired&quot;}
+classpath:FP_CL_HU90/ValidarToken.feature:69
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.70">
+      <div class="step-ref skipped">70</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>print response</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[7:72]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[7:72]</span>
+                <span class="scenario-name">7. Consulta de API con apikey incorrecto</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>470</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[7:72]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[7:72]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def reqBodyCorrecto = read (&quot;classpath:Token/DatosCorrecto/request.json&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[7:72]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def reqBodyIncorrecto = read (&quot;classpath:Token/DatosIncorrecto/request.json&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[7:72]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.6">
+      <div class="step-ref bg-step">6</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def reqBodyIncompleto = read (&quot;classpath:Token/DatosIncorrecto/requestIncompleto.json&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[7:72]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.7">
+      <div class="step-ref bg-step">7</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def tokenExpirado = read (&quot;classpath:Token/DatosIncorrecto/idToken.json&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[7:72]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.8">
+      <div class="step-ref bg-step">8</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def tokenCorrecto = read (&quot;classpath:Token/DatosCorrecto/idToken.json&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[7:72]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.9">
+      <div class="step-ref bg-step">9</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def ApiKey =  read (&quot;classpath:Token/DatosCorrecto/xApiKey.json&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.73">
+      <div class="step-ref passed">73</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &#39;https://7tmni6kk16.execute-api.us-east-1.amazonaws.com/dev/api/v1/transactionsAggregator?status=INCONSISTENTE&amp;status=REPETIDA&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.74">
+      <div class="step-ref passed">74</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Authorization =  tokenCorrecto</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.75">
+      <div class="step-ref passed">75</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header x-api-key = &#39;5255f&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.76">
+      <div class="step-ref passed">76</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Accept = &#39;*/*&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.77">
+      <div class="step-ref passed">77</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">462</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.77">18:17:54.250 request:
+1 &gt; GET https://7tmni6kk16.execute-api.us-east-1.amazonaws.com/dev/api/v1/transactionsAggregator?status=INCONSISTENTE&amp;status=REPETIDA
+1 &gt; Authorization: eyJraWQiOiJMU2lpRG4zQXZyXC85QVBvejhpRDk3cFBJNFNcL0RYVFdOSUpDVVFFdkNFSGc9IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiJkNDM4YzRmOC1jMGUxLTcwYzItZTc2Yi05YTlmMjViY2I5YTIiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfd2tzTTV6anFKIiwiY29nbml0bzp1c2VybmFtZSI6ImQ0MzhjNGY4LWMwZTEtNzBjMi1lNzZiLTlhOWYyNWJjYjlhMiIsIm9yaWdpbl9qdGkiOiI0N2MzM2ZhNC01NDM5LTQzZDAtYTBiNi1hYjVmNGRhNzMyNTgiLCJhdWQiOiIzYmh1ZmduOHYyNjQydHZnNnBwYzc4NTdmbCIsImV2ZW50X2lkIjoiOWNhZjE0ZjMtNmQwMS00NDI0LTkwNzMtYmE3MDY0NjNjOTU1IiwidG9rZW5fdXNlIjoiaWQiLCJhdXRoX3RpbWUiOjE3MTk0MjUwNDMsImV4cCI6MTcxOTQyODY0MywiaWF0IjoxNzE5NDI1MDQzLCJqdGkiOiJjOWI5MWM4OS1iZTlkLTRiMWYtYWIxNC0xMjc3MzI5YmQ4NzEiLCJlbWFpbCI6ImN5bF9kZkByZWRiLmVlIn0.rs4oneBSL8fzaTQnKXizoOM9gki0vqxPC0YbdzIar3aUk6XvU49QUj2S1pOD3TBKQUuA7QRZTu-gM3boYv5rxeuJbb7tYcrmUoX689MTYM2VDV6e_oiqIMOF_cX6qtsgLI_lStPfHavqyz8PH1tp4ieG0_YjMlQ3_sEDiwQf_R2_gBdJjWCEbtNTrErLa9R7DI5-WjU1AIy6WTdR2xUYWi2dC9ksUQjD4wpSGNcuCXtONTkBz5wSJliwJTwNu4ez2QtnCJztVMxeGrNEW7il4ZVtuFUe9MHb9NJ-9zGzM6iTUhLUHj4qChOKcJX-be_GXJscTszF1-MoqYqz3i28NA
+1 &gt; x-api-key: 5255f
+1 &gt; Accept: */*
+1 &gt; Host: 7tmni6kk16.execute-api.us-east-1.amazonaws.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.4)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+18:17:54.710 response time in milliseconds: 460
+1 &lt; 401
+1 &lt; Date: Tue, 03 Dec 2024 23:17:54 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Content-Length: 44
+1 &lt; Connection: keep-alive
+1 &lt; x-amzn-RequestId: d6aa6e2c-a8d6-498b-8ace-6fa4850e924b
+1 &lt; x-amzn-ErrorType: UnauthorizedException
+1 &lt; x-amz-apigw-id: CPOxdFiMoAMEX4w=
+{&quot;message&quot;:&quot;The incoming token has expired&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.78">
+      <div class="step-ref failed">78</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 403</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.78">18:17:54.711 classpath:FP_CL_HU90/ValidarToken.feature:78
+Then status 403
+status code was: 401, expected: 403, response time in milliseconds: 460, url: https://7tmni6kk16.execute-api.us-east-1.amazonaws.com/dev/api/v1/transactionsAggregator?status=INCONSISTENTE&amp;status=REPETIDA, response: 
+{&quot;message&quot;:&quot;The incoming token has expired&quot;}
+classpath:FP_CL_HU90/ValidarToken.feature:78
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.79">
+      <div class="step-ref skipped">79</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>print response</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[8:82]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[8:82]</span>
+                <span class="scenario-name">8. Consulta de API con token válido y apikey correcto</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>336</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[8:82]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[8:82]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def reqBodyCorrecto = read (&quot;classpath:Token/DatosCorrecto/request.json&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[8:82]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def reqBodyIncorrecto = read (&quot;classpath:Token/DatosIncorrecto/request.json&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[8:82]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.6">
+      <div class="step-ref bg-step">6</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def reqBodyIncompleto = read (&quot;classpath:Token/DatosIncorrecto/requestIncompleto.json&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[8:82]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.7">
+      <div class="step-ref bg-step">7</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def tokenExpirado = read (&quot;classpath:Token/DatosIncorrecto/idToken.json&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[8:82]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.8">
+      <div class="step-ref bg-step">8</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def tokenCorrecto = read (&quot;classpath:Token/DatosCorrecto/idToken.json&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[8:82]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.9">
+      <div class="step-ref bg-step">9</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def ApiKey =  read (&quot;classpath:Token/DatosCorrecto/xApiKey.json&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.83">
+      <div class="step-ref passed">83</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &#39;https://7tmni6kk16.execute-api.us-east-1.amazonaws.com/dev/api/v1/transactionsAggregator?status=EFECTIVA&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.84">
+      <div class="step-ref passed">84</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Authorization =  tokenCorrecto</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.85">
+      <div class="step-ref passed">85</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header x-api-key = ApiKey</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.86">
+      <div class="step-ref passed">86</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Accept = &#39;*/*&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.87">
+      <div class="step-ref passed">87</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">329</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.87">18:17:54.734 request:
+1 &gt; GET https://7tmni6kk16.execute-api.us-east-1.amazonaws.com/dev/api/v1/transactionsAggregator?status=EFECTIVA
+1 &gt; Authorization: eyJraWQiOiJMU2lpRG4zQXZyXC85QVBvejhpRDk3cFBJNFNcL0RYVFdOSUpDVVFFdkNFSGc9IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiJkNDM4YzRmOC1jMGUxLTcwYzItZTc2Yi05YTlmMjViY2I5YTIiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfd2tzTTV6anFKIiwiY29nbml0bzp1c2VybmFtZSI6ImQ0MzhjNGY4LWMwZTEtNzBjMi1lNzZiLTlhOWYyNWJjYjlhMiIsIm9yaWdpbl9qdGkiOiI0N2MzM2ZhNC01NDM5LTQzZDAtYTBiNi1hYjVmNGRhNzMyNTgiLCJhdWQiOiIzYmh1ZmduOHYyNjQydHZnNnBwYzc4NTdmbCIsImV2ZW50X2lkIjoiOWNhZjE0ZjMtNmQwMS00NDI0LTkwNzMtYmE3MDY0NjNjOTU1IiwidG9rZW5fdXNlIjoiaWQiLCJhdXRoX3RpbWUiOjE3MTk0MjUwNDMsImV4cCI6MTcxOTQyODY0MywiaWF0IjoxNzE5NDI1MDQzLCJqdGkiOiJjOWI5MWM4OS1iZTlkLTRiMWYtYWIxNC0xMjc3MzI5YmQ4NzEiLCJlbWFpbCI6ImN5bF9kZkByZWRiLmVlIn0.rs4oneBSL8fzaTQnKXizoOM9gki0vqxPC0YbdzIar3aUk6XvU49QUj2S1pOD3TBKQUuA7QRZTu-gM3boYv5rxeuJbb7tYcrmUoX689MTYM2VDV6e_oiqIMOF_cX6qtsgLI_lStPfHavqyz8PH1tp4ieG0_YjMlQ3_sEDiwQf_R2_gBdJjWCEbtNTrErLa9R7DI5-WjU1AIy6WTdR2xUYWi2dC9ksUQjD4wpSGNcuCXtONTkBz5wSJliwJTwNu4ez2QtnCJztVMxeGrNEW7il4ZVtuFUe9MHb9NJ-9zGzM6iTUhLUHj4qChOKcJX-be_GXJscTszF1-MoqYqz3i28NA
+1 &gt; x-api-key: LpnIYryW2n7UDv7wsFo6H4x9Nj61AjXmEAwKxVej
+1 &gt; Accept: */*
+1 &gt; Host: 7tmni6kk16.execute-api.us-east-1.amazonaws.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.4)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+18:17:55.061 response time in milliseconds: 327
+1 &lt; 401
+1 &lt; Date: Tue, 03 Dec 2024 23:17:54 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Content-Length: 44
+1 &lt; Connection: keep-alive
+1 &lt; x-amzn-RequestId: f05785eb-b2fb-423c-bbe4-9ba8a71e0bf9
+1 &lt; x-amzn-ErrorType: UnauthorizedException
+1 &lt; x-amz-apigw-id: CPOxgElfIAMEYVg=
+{&quot;message&quot;:&quot;The incoming token has expired&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.88">
+      <div class="step-ref failed">88</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.88">18:17:55.062 classpath:FP_CL_HU90/ValidarToken.feature:88
+Then status 200
+status code was: 401, expected: 200, response time in milliseconds: 327, url: https://7tmni6kk16.execute-api.us-east-1.amazonaws.com/dev/api/v1/transactionsAggregator?status=EFECTIVA, response: 
+{&quot;message&quot;:&quot;The incoming token has expired&quot;}
+classpath:FP_CL_HU90/ValidarToken.feature:88
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.89">
+      <div class="step-ref skipped">89</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>print response</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

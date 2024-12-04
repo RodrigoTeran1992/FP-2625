@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
+  api_host:'https://app.posthog.com',
+  persistence:'localStorage',
+  autocapture:false,
+  capture_pageview:false,
+  api_transport:'sendBeacon',
+  loaded: function(posthog) { 
+    posthog.identify("324cb532-6817-4552-b3aa-59f76a4b8732",{name:"masencio"});
+    posthog.capture("report_feature",{karate_version:"1.2.0",karate_meta:null});
+  }
+});
+</script>
+  
+    <title>FP_Migracion.isPaymentSuccess</title>  
+  </head>
+  <body>   
+    <div id="root-container">
+      <div id="leftnav">
+                
+        <div>
+  <div class="nav-logo">
+    <a href="https://karatelabs.io">
+      <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">3</div>
+      <div id="nav-fail" class="bg-danger">0</div>
+    </div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>         
+  <div id="nav-date">
+    <div>2024-12-04 03:16:31 p. m.</div>
+  </div>        
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item passed">
+            <a href="#[1:8]"><span>[1:8]</span> <span>1. Consulta de estado de pago exitoso</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[2:17]"><span>[2:17]</span> <span>2. Consulta de estado ingresando datos de compra sin pagar</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[3:26]"><span>[3:26]</span> <span>3. Consulta de estado sin registrar los datos de la compra</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">FP_Migracion/isPaymentSuccess.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">Consulta de estado de pago OPPWA</span>
+          <span class="feature-description"></span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1:8]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1:8]</span>
+                <span class="scenario-name">1. Consulta de estado de pago exitoso</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>1526</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1:8]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1:8]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def idtoken1 = &#39;eyJraWQiOiIwOTBKbnBPcUQ3S1FGZHRKcWpRbW1pcUtQYkMwTW9Zb2xnanlmXC9ydWZyND0iLCJhbGciOiJSUzI1NiJ9.eyJjdXN0b206ZGV2aWNlX2lkIjoiZUFfWF9rVEZRSUdDeG40MUxGTGxhVTpBUEE5MWJFd3A3V1RjTnpJODI2dndvcHF3QkMtbUQ2cHZTSW9HTlZyQ1pFNWo3RFktcmpOY2lkSG5ZWVNuOFg2WlI2a0UwNU42R014R2x1aEU2YzBBNjVjVUJJN21USUdCTXFkODdYSjNGcUxKVlNoRlo2S2J4ayIsInN1YiI6Ijc0Yzg3NGE4LTEwZTEtNzAxZi1jZGJlLTIyNmM4YWJiZGZmMSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJjdXN0b206dXNlcl9zdGF0dXMiOiJhY3RpdmUiLCJjdXN0b206bGFzdF9wYXNzd29yZF9jaGFuZ2UiOiIxNzMzMzI4NTExIiwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfOEV5TDkwMDJlIiwiY29nbml0bzp1c2VybmFtZSI6Ijc0Yzg3NGE4LTEwZTEtNzAxZi1jZGJlLTIyNmM4YWJiZGZmMSIsIm9yaWdpbl9qdGkiOiI2ODg4NWYyMS03MjE5LTQ0ZmQtOGM2Yy0zNzgwNjViMDNiYmYiLCJhdWQiOiJxcm05ZTZsMDRoZjRzOGowMzg0bmxpcTAzIiwiZXZlbnRfaWQiOiI4ZDhjNGU3My1mZTE1LTRlNGYtYjY5ZS05YzgzMmJjY2E2ZjAiLCJjdXN0b206bG9naW5fYXR0ZW1wdHMiOiIwIiwiY3VzdG9tOm9uYm9hcmRpbmdfc3RhdGUiOiJtcG9zLXB1cmNoYXNlZCIsInRva2VuX3VzZSI6ImlkIiwiY3VzdG9tOm1wb3NfbGlua2VkIjoiZmFsc2UiLCJhdXRoX3RpbWUiOjE3MzMzNDI5NDYsImV4cCI6MTczMzM0NjU0NiwiaWF0IjoxNzMzMzQyOTQ2LCJqdGkiOiI3NzNlYmZjOC0yZTNiLTQ4OTYtOTY5MS04YzFlNTc1MjE3OTUiLCJlbWFpbCI6Im1pamVubzMzOTlAaWtvd2F0LmNvbSJ9.h3lpschSiBvzqE0H-AkIuwZcHJ5YOziYAaaFRmhVHrJM6GMGmkB-_D8XUFN4sEiJcJey90eelZG4CcJOKPzHhfhupG8syat5ZkyJ4dX6-8y-0mzpEp-OX6PFh3pesRzNGVWRuGsg94729X-yBVqCWCpyNXlSXAxQj6OnvopDWv232mYOIEO1kaU_GUvgexHqRqRKK372G53Xd6DLRKN09UJ3RX7LUfIO5k3mQrJFB-nr_BcTctzCtsKkKAlNxH36Oh8KngfHf3kJCHwTEH3iGDk43hhmj-hcBTZU_wg4C-QGi81u7n9WaoRP4EPK5OGV52wfmMnl0J-rN-gZl0-UYw&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">62</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:8]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def idtoken2 = &#39;eyJraWQiOiIwOTBKbnBPcUQ3S1FGZHRKcWpRbW1pcUtQYkMwTW9Zb2xnanlmXC9ydWZyND0iLCJhbGciOiJSUzI1NiJ9.eyJjdXN0b206ZGV2aWNlX2lkIjoiZUFfWF9rVEZRSUdDeG40MUxGTGxhVTpBUEE5MWJFd3A3V1RjTnpJODI2dndvcHF3QkMtbUQ2cHZTSW9HTlZyQ1pFNWo3RFktcmpOY2lkSG5ZWVNuOFg2WlI2a0UwNU42R014R2x1aEU2YzBBNjVjVUJJN21USUdCTXFkODdYSjNGcUxKVlNoRlo2S2J4ayIsInN1YiI6ImE0NTgyNGY4LTkwMDEtNzAyYi0zYTY4LTFmMWVjY2NiMWE4NiIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJjdXN0b206dXNlcl9zdGF0dXMiOiJhY3RpdmUiLCJjdXN0b206bGFzdF9wYXNzd29yZF9jaGFuZ2UiOiIxNzMzMzM1NjE0IiwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfOEV5TDkwMDJlIiwiY29nbml0bzp1c2VybmFtZSI6ImE0NTgyNGY4LTkwMDEtNzAyYi0zYTY4LTFmMWVjY2NiMWE4NiIsIm9yaWdpbl9qdGkiOiJlYTllNDcxNy00OWM3LTRjNTUtYmU4NC00N2U5MzhiZThkOTMiLCJhdWQiOiJxcm05ZTZsMDRoZjRzOGowMzg0bmxpcTAzIiwiZXZlbnRfaWQiOiI2ZDlmYWE3NC03ZjVkLTRiOWEtODBlMy0yMDVjYWM4NTY3OGIiLCJjdXN0b206bG9naW5fYXR0ZW1wdHMiOiIwIiwiY3VzdG9tOm9uYm9hcmRpbmdfc3RhdGUiOiJ1c2VyLXNpZ25lZC11cCIsInRva2VuX3VzZSI6ImlkIiwiY3VzdG9tOm1wb3NfbGlua2VkIjoiZmFsc2UiLCJhdXRoX3RpbWUiOjE3MzMzNDMxMDgsImV4cCI6MTczMzM0NjcwOCwiaWF0IjoxNzMzMzQzMTA4LCJqdGkiOiI1ZTViZDQ2Mi05OTgwLTQ5ODMtOGZmMS00OTdiMjMxNGJlMjMiLCJlbWFpbCI6IndpeGl2aTkzNDlAY2FudG96aWwuY29tIn0.il6wnhsf8jfjaeKuwumTOrosTeWElEsrcmIY-8HDA4cgD0us4s2btJKXnZpTaq7hFfwOJUqXLeAbFins30B0k8KGW-WziQ8fQqlW7kg3QJLUunQ7J0CWCfYC6XxJeQswzBj1Am4nTAUmlktUN0yX68vbEq_6D8_AI8MRsU0jopXv2QBICff1Vy8JVBy6i741vjUhKh_qhLXlGEzodnH_KJfBGqcirtEdGEcsDmQI7oM9ggAt4sd5m4IIwhayzorJJFkLtOGld8GFv0YGq4nSyxGJjE_mmRnwZm58EUxjj17hNPSs9oPIhCw9AjtuglM83GS26Tz85M-CBwWAPG4how&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:8]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.6">
+      <div class="step-ref bg-step">6</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def idtoken3 = &#39;eyJraWQiOiIwOTBKbnBPcUQ3S1FGZHRKcWpRbW1pcUtQYkMwTW9Zb2xnanlmXC9ydWZyND0iLCJhbGciOiJSUzI1NiJ9.eyJjdXN0b206ZGV2aWNlX2lkIjoiZUFfWF9rVEZRSUdDeG40MUxGTGxhVTpBUEE5MWJFd3A3V1RjTnpJODI2dndvcHF3QkMtbUQ2cHZTSW9HTlZyQ1pFNWo3RFktcmpOY2lkSG5ZWVNuOFg2WlI2a0UwNU42R014R2x1aEU2YzBBNjVjVUJJN21USUdCTXFkODdYSjNGcUxKVlNoRlo2S2J4ayIsInN1YiI6IjA0NDgzNDc4LWIwNjEtNzA4My0wMzlhLTIxM2ZjMGRkNGYyYSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJjdXN0b206dXNlcl9zdGF0dXMiOiJhY3RpdmUiLCJjdXN0b206bGFzdF9wYXNzd29yZF9jaGFuZ2UiOiIxNzMzMzQyNTcxIiwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfOEV5TDkwMDJlIiwiY29nbml0bzp1c2VybmFtZSI6IjA0NDgzNDc4LWIwNjEtNzA4My0wMzlhLTIxM2ZjMGRkNGYyYSIsIm9yaWdpbl9qdGkiOiJjODFkYzY2Ni0yM2ZjLTRhNzYtOWU2YS0zNGUwNTAyMzRlODIiLCJhdWQiOiJxcm05ZTZsMDRoZjRzOGowMzg0bmxpcTAzIiwiZXZlbnRfaWQiOiI1MTA1ZjcwOS1hYTAzLTRhZWMtODVhMC0wOWM5OTFkYzZkMWMiLCJjdXN0b206bG9naW5fYXR0ZW1wdHMiOiIwIiwiY3VzdG9tOm9uYm9hcmRpbmdfc3RhdGUiOiJ1c2VyLXNpZ25lZC11cCIsInRva2VuX3VzZSI6ImlkIiwiY3VzdG9tOm1wb3NfbGlua2VkIjoiZmFsc2UiLCJhdXRoX3RpbWUiOjE3MzMzNDI2NjYsImV4cCI6MTczMzM0NjI2NiwiaWF0IjoxNzMzMzQyNjY2LCJqdGkiOiI3OTk3NTRlZS05MjEzLTRmYWItOTk1NC1iZmQ2OGVjNDg1MTMiLCJlbWFpbCI6ImNvbGVuZW40ODJAY2FudG96aWwuY29tIn0.UBxryxRqVZegpkUq4qJg50E2Lh8ONoxcBGb9_-QKGprwxD9SJu7e9fyVQ6JiyPmGr-ZBlABa3xQcjnpYSa0duFCbnDHgZfOX3Ck24rjh_OKEJpn7c_ko38yJ9Y9WG2cRQxwgXx40Dc0Qn8LKAceeMSh6ol2tav8I_W1SzAnLC8gJ6r8ySX6yrXh0-bM27XaVSROmblyxu7hJZ0uDhxNCMS6g2FFno0C7g61JGl8fS5AQLVwYLgHAYpe9ruc98oRQ7d51WFiUzizQH_Rx2vbOdcbH9XEa1epNYWoOJSP8sufNw_YU0TisccBf4odOEllsmDFzURPX6dDksxAK5fzz4Q&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.9">
+      <div class="step-ref passed">9</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &#39;https://api-qa.datafast.ec&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.10">
+      <div class="step-ref passed">10</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>path &quot;mpos&quot;,&quot;api&quot;,&quot;v1&quot;,&quot;purchase&quot;,&quot;isPaymentSuccess&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">10</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.11">
+      <div class="step-ref passed">11</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Authorization = idtoken1</span>
+      </div>
+    </div>
+    <div class="time-cell passed">11</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.12">
+      <div class="step-ref passed">12</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Accept = &#39;*/*&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.13">
+      <div class="step-ref passed">13</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1384</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.13">15:16:28.806 request:
+1 &gt; GET https://api-qa.datafast.ec/mpos/api/v1/purchase/isPaymentSuccess
+1 &gt; Authorization: eyJraWQiOiIwOTBKbnBPcUQ3S1FGZHRKcWpRbW1pcUtQYkMwTW9Zb2xnanlmXC9ydWZyND0iLCJhbGciOiJSUzI1NiJ9.eyJjdXN0b206ZGV2aWNlX2lkIjoiZUFfWF9rVEZRSUdDeG40MUxGTGxhVTpBUEE5MWJFd3A3V1RjTnpJODI2dndvcHF3QkMtbUQ2cHZTSW9HTlZyQ1pFNWo3RFktcmpOY2lkSG5ZWVNuOFg2WlI2a0UwNU42R014R2x1aEU2YzBBNjVjVUJJN21USUdCTXFkODdYSjNGcUxKVlNoRlo2S2J4ayIsInN1YiI6Ijc0Yzg3NGE4LTEwZTEtNzAxZi1jZGJlLTIyNmM4YWJiZGZmMSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJjdXN0b206dXNlcl9zdGF0dXMiOiJhY3RpdmUiLCJjdXN0b206bGFzdF9wYXNzd29yZF9jaGFuZ2UiOiIxNzMzMzI4NTExIiwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfOEV5TDkwMDJlIiwiY29nbml0bzp1c2VybmFtZSI6Ijc0Yzg3NGE4LTEwZTEtNzAxZi1jZGJlLTIyNmM4YWJiZGZmMSIsIm9yaWdpbl9qdGkiOiI2ODg4NWYyMS03MjE5LTQ0ZmQtOGM2Yy0zNzgwNjViMDNiYmYiLCJhdWQiOiJxcm05ZTZsMDRoZjRzOGowMzg0bmxpcTAzIiwiZXZlbnRfaWQiOiI4ZDhjNGU3My1mZTE1LTRlNGYtYjY5ZS05YzgzMmJjY2E2ZjAiLCJjdXN0b206bG9naW5fYXR0ZW1wdHMiOiIwIiwiY3VzdG9tOm9uYm9hcmRpbmdfc3RhdGUiOiJtcG9zLXB1cmNoYXNlZCIsInRva2VuX3VzZSI6ImlkIiwiY3VzdG9tOm1wb3NfbGlua2VkIjoiZmFsc2UiLCJhdXRoX3RpbWUiOjE3MzMzNDI5NDYsImV4cCI6MTczMzM0NjU0NiwiaWF0IjoxNzMzMzQyOTQ2LCJqdGkiOiI3NzNlYmZjOC0yZTNiLTQ4OTYtOTY5MS04YzFlNTc1MjE3OTUiLCJlbWFpbCI6Im1pamVubzMzOTlAaWtvd2F0LmNvbSJ9.h3lpschSiBvzqE0H-AkIuwZcHJ5YOziYAaaFRmhVHrJM6GMGmkB-_D8XUFN4sEiJcJey90eelZG4CcJOKPzHhfhupG8syat5ZkyJ4dX6-8y-0mzpEp-OX6PFh3pesRzNGVWRuGsg94729X-yBVqCWCpyNXlSXAxQj6OnvopDWv232mYOIEO1kaU_GUvgexHqRqRKK372G53Xd6DLRKN09UJ3RX7LUfIO5k3mQrJFB-nr_BcTctzCtsKkKAlNxH36Oh8KngfHf3kJCHwTEH3iGDk43hhmj-hcBTZU_wg4C-QGi81u7n9WaoRP4EPK5OGV52wfmMnl0J-rN-gZl0-UYw
+1 &gt; Accept: */*
+1 &gt; Host: api-qa.datafast.ec
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.4)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+15:16:30.012 response time in milliseconds: 1204
+1 &lt; 200
+1 &lt; Date: Wed, 04 Dec 2024 20:16:28 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Content-Length: 4
+1 &lt; Connection: keep-alive
+1 &lt; x-amzn-RequestId: 44a18ae1-e51e-4430-97da-8410ad995fd5
+1 &lt; x-amz-apigw-id: CSHIeFDZoAMEBvw=
+1 &lt; X-Amzn-Trace-Id: Root=1-6750b89c-1b51185e04c5cc9356a8971c
+true
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref passed">14</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">7</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.15">
+      <div class="step-ref passed">15</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>print response</span>
+      </div>
+    </div>
+    <div class="time-cell passed">46</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.15">15:16:30.067 [print] true 
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[2:17]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[2:17]</span>
+                <span class="scenario-name">2. Consulta de estado ingresando datos de compra sin pagar</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>662</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[2:17]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[2:17]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def idtoken1 = &#39;eyJraWQiOiIwOTBKbnBPcUQ3S1FGZHRKcWpRbW1pcUtQYkMwTW9Zb2xnanlmXC9ydWZyND0iLCJhbGciOiJSUzI1NiJ9.eyJjdXN0b206ZGV2aWNlX2lkIjoiZUFfWF9rVEZRSUdDeG40MUxGTGxhVTpBUEE5MWJFd3A3V1RjTnpJODI2dndvcHF3QkMtbUQ2cHZTSW9HTlZyQ1pFNWo3RFktcmpOY2lkSG5ZWVNuOFg2WlI2a0UwNU42R014R2x1aEU2YzBBNjVjVUJJN21USUdCTXFkODdYSjNGcUxKVlNoRlo2S2J4ayIsInN1YiI6Ijc0Yzg3NGE4LTEwZTEtNzAxZi1jZGJlLTIyNmM4YWJiZGZmMSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJjdXN0b206dXNlcl9zdGF0dXMiOiJhY3RpdmUiLCJjdXN0b206bGFzdF9wYXNzd29yZF9jaGFuZ2UiOiIxNzMzMzI4NTExIiwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfOEV5TDkwMDJlIiwiY29nbml0bzp1c2VybmFtZSI6Ijc0Yzg3NGE4LTEwZTEtNzAxZi1jZGJlLTIyNmM4YWJiZGZmMSIsIm9yaWdpbl9qdGkiOiI2ODg4NWYyMS03MjE5LTQ0ZmQtOGM2Yy0zNzgwNjViMDNiYmYiLCJhdWQiOiJxcm05ZTZsMDRoZjRzOGowMzg0bmxpcTAzIiwiZXZlbnRfaWQiOiI4ZDhjNGU3My1mZTE1LTRlNGYtYjY5ZS05YzgzMmJjY2E2ZjAiLCJjdXN0b206bG9naW5fYXR0ZW1wdHMiOiIwIiwiY3VzdG9tOm9uYm9hcmRpbmdfc3RhdGUiOiJtcG9zLXB1cmNoYXNlZCIsInRva2VuX3VzZSI6ImlkIiwiY3VzdG9tOm1wb3NfbGlua2VkIjoiZmFsc2UiLCJhdXRoX3RpbWUiOjE3MzMzNDI5NDYsImV4cCI6MTczMzM0NjU0NiwiaWF0IjoxNzMzMzQyOTQ2LCJqdGkiOiI3NzNlYmZjOC0yZTNiLTQ4OTYtOTY5MS04YzFlNTc1MjE3OTUiLCJlbWFpbCI6Im1pamVubzMzOTlAaWtvd2F0LmNvbSJ9.h3lpschSiBvzqE0H-AkIuwZcHJ5YOziYAaaFRmhVHrJM6GMGmkB-_D8XUFN4sEiJcJey90eelZG4CcJOKPzHhfhupG8syat5ZkyJ4dX6-8y-0mzpEp-OX6PFh3pesRzNGVWRuGsg94729X-yBVqCWCpyNXlSXAxQj6OnvopDWv232mYOIEO1kaU_GUvgexHqRqRKK372G53Xd6DLRKN09UJ3RX7LUfIO5k3mQrJFB-nr_BcTctzCtsKkKAlNxH36Oh8KngfHf3kJCHwTEH3iGDk43hhmj-hcBTZU_wg4C-QGi81u7n9WaoRP4EPK5OGV52wfmMnl0J-rN-gZl0-UYw&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2:17]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def idtoken2 = &#39;eyJraWQiOiIwOTBKbnBPcUQ3S1FGZHRKcWpRbW1pcUtQYkMwTW9Zb2xnanlmXC9ydWZyND0iLCJhbGciOiJSUzI1NiJ9.eyJjdXN0b206ZGV2aWNlX2lkIjoiZUFfWF9rVEZRSUdDeG40MUxGTGxhVTpBUEE5MWJFd3A3V1RjTnpJODI2dndvcHF3QkMtbUQ2cHZTSW9HTlZyQ1pFNWo3RFktcmpOY2lkSG5ZWVNuOFg2WlI2a0UwNU42R014R2x1aEU2YzBBNjVjVUJJN21USUdCTXFkODdYSjNGcUxKVlNoRlo2S2J4ayIsInN1YiI6ImE0NTgyNGY4LTkwMDEtNzAyYi0zYTY4LTFmMWVjY2NiMWE4NiIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJjdXN0b206dXNlcl9zdGF0dXMiOiJhY3RpdmUiLCJjdXN0b206bGFzdF9wYXNzd29yZF9jaGFuZ2UiOiIxNzMzMzM1NjE0IiwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfOEV5TDkwMDJlIiwiY29nbml0bzp1c2VybmFtZSI6ImE0NTgyNGY4LTkwMDEtNzAyYi0zYTY4LTFmMWVjY2NiMWE4NiIsIm9yaWdpbl9qdGkiOiJlYTllNDcxNy00OWM3LTRjNTUtYmU4NC00N2U5MzhiZThkOTMiLCJhdWQiOiJxcm05ZTZsMDRoZjRzOGowMzg0bmxpcTAzIiwiZXZlbnRfaWQiOiI2ZDlmYWE3NC03ZjVkLTRiOWEtODBlMy0yMDVjYWM4NTY3OGIiLCJjdXN0b206bG9naW5fYXR0ZW1wdHMiOiIwIiwiY3VzdG9tOm9uYm9hcmRpbmdfc3RhdGUiOiJ1c2VyLXNpZ25lZC11cCIsInRva2VuX3VzZSI6ImlkIiwiY3VzdG9tOm1wb3NfbGlua2VkIjoiZmFsc2UiLCJhdXRoX3RpbWUiOjE3MzMzNDMxMDgsImV4cCI6MTczMzM0NjcwOCwiaWF0IjoxNzMzMzQzMTA4LCJqdGkiOiI1ZTViZDQ2Mi05OTgwLTQ5ODMtOGZmMS00OTdiMjMxNGJlMjMiLCJlbWFpbCI6IndpeGl2aTkzNDlAY2FudG96aWwuY29tIn0.il6wnhsf8jfjaeKuwumTOrosTeWElEsrcmIY-8HDA4cgD0us4s2btJKXnZpTaq7hFfwOJUqXLeAbFins30B0k8KGW-WziQ8fQqlW7kg3QJLUunQ7J0CWCfYC6XxJeQswzBj1Am4nTAUmlktUN0yX68vbEq_6D8_AI8MRsU0jopXv2QBICff1Vy8JVBy6i741vjUhKh_qhLXlGEzodnH_KJfBGqcirtEdGEcsDmQI7oM9ggAt4sd5m4IIwhayzorJJFkLtOGld8GFv0YGq4nSyxGJjE_mmRnwZm58EUxjj17hNPSs9oPIhCw9AjtuglM83GS26Tz85M-CBwWAPG4how&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2:17]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.6">
+      <div class="step-ref bg-step">6</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def idtoken3 = &#39;eyJraWQiOiIwOTBKbnBPcUQ3S1FGZHRKcWpRbW1pcUtQYkMwTW9Zb2xnanlmXC9ydWZyND0iLCJhbGciOiJSUzI1NiJ9.eyJjdXN0b206ZGV2aWNlX2lkIjoiZUFfWF9rVEZRSUdDeG40MUxGTGxhVTpBUEE5MWJFd3A3V1RjTnpJODI2dndvcHF3QkMtbUQ2cHZTSW9HTlZyQ1pFNWo3RFktcmpOY2lkSG5ZWVNuOFg2WlI2a0UwNU42R014R2x1aEU2YzBBNjVjVUJJN21USUdCTXFkODdYSjNGcUxKVlNoRlo2S2J4ayIsInN1YiI6IjA0NDgzNDc4LWIwNjEtNzA4My0wMzlhLTIxM2ZjMGRkNGYyYSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJjdXN0b206dXNlcl9zdGF0dXMiOiJhY3RpdmUiLCJjdXN0b206bGFzdF9wYXNzd29yZF9jaGFuZ2UiOiIxNzMzMzQyNTcxIiwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfOEV5TDkwMDJlIiwiY29nbml0bzp1c2VybmFtZSI6IjA0NDgzNDc4LWIwNjEtNzA4My0wMzlhLTIxM2ZjMGRkNGYyYSIsIm9yaWdpbl9qdGkiOiJjODFkYzY2Ni0yM2ZjLTRhNzYtOWU2YS0zNGUwNTAyMzRlODIiLCJhdWQiOiJxcm05ZTZsMDRoZjRzOGowMzg0bmxpcTAzIiwiZXZlbnRfaWQiOiI1MTA1ZjcwOS1hYTAzLTRhZWMtODVhMC0wOWM5OTFkYzZkMWMiLCJjdXN0b206bG9naW5fYXR0ZW1wdHMiOiIwIiwiY3VzdG9tOm9uYm9hcmRpbmdfc3RhdGUiOiJ1c2VyLXNpZ25lZC11cCIsInRva2VuX3VzZSI6ImlkIiwiY3VzdG9tOm1wb3NfbGlua2VkIjoiZmFsc2UiLCJhdXRoX3RpbWUiOjE3MzMzNDI2NjYsImV4cCI6MTczMzM0NjI2NiwiaWF0IjoxNzMzMzQyNjY2LCJqdGkiOiI3OTk3NTRlZS05MjEzLTRmYWItOTk1NC1iZmQ2OGVjNDg1MTMiLCJlbWFpbCI6ImNvbGVuZW40ODJAY2FudG96aWwuY29tIn0.UBxryxRqVZegpkUq4qJg50E2Lh8ONoxcBGb9_-QKGprwxD9SJu7e9fyVQ6JiyPmGr-ZBlABa3xQcjnpYSa0duFCbnDHgZfOX3Ck24rjh_OKEJpn7c_ko38yJ9Y9WG2cRQxwgXx40Dc0Qn8LKAceeMSh6ol2tav8I_W1SzAnLC8gJ6r8ySX6yrXh0-bM27XaVSROmblyxu7hJZ0uDhxNCMS6g2FFno0C7g61JGl8fS5AQLVwYLgHAYpe9ruc98oRQ7d51WFiUzizQH_Rx2vbOdcbH9XEa1epNYWoOJSP8sufNw_YU0TisccBf4odOEllsmDFzURPX6dDksxAK5fzz4Q&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.18">
+      <div class="step-ref passed">18</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &#39;https://api-qa.datafast.ec&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.19">
+      <div class="step-ref passed">19</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>path &quot;mpos&quot;,&quot;api&quot;,&quot;v1&quot;,&quot;purchase&quot;,&quot;isPaymentSuccess&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.20">
+      <div class="step-ref passed">20</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Authorization = idtoken2</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.21">
+      <div class="step-ref passed">21</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Accept = &#39;*/*&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.22">
+      <div class="step-ref passed">22</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">658</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.22">15:16:30.093 request:
+1 &gt; GET https://api-qa.datafast.ec/mpos/api/v1/purchase/isPaymentSuccess
+1 &gt; Authorization: eyJraWQiOiIwOTBKbnBPcUQ3S1FGZHRKcWpRbW1pcUtQYkMwTW9Zb2xnanlmXC9ydWZyND0iLCJhbGciOiJSUzI1NiJ9.eyJjdXN0b206ZGV2aWNlX2lkIjoiZUFfWF9rVEZRSUdDeG40MUxGTGxhVTpBUEE5MWJFd3A3V1RjTnpJODI2dndvcHF3QkMtbUQ2cHZTSW9HTlZyQ1pFNWo3RFktcmpOY2lkSG5ZWVNuOFg2WlI2a0UwNU42R014R2x1aEU2YzBBNjVjVUJJN21USUdCTXFkODdYSjNGcUxKVlNoRlo2S2J4ayIsInN1YiI6ImE0NTgyNGY4LTkwMDEtNzAyYi0zYTY4LTFmMWVjY2NiMWE4NiIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJjdXN0b206dXNlcl9zdGF0dXMiOiJhY3RpdmUiLCJjdXN0b206bGFzdF9wYXNzd29yZF9jaGFuZ2UiOiIxNzMzMzM1NjE0IiwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfOEV5TDkwMDJlIiwiY29nbml0bzp1c2VybmFtZSI6ImE0NTgyNGY4LTkwMDEtNzAyYi0zYTY4LTFmMWVjY2NiMWE4NiIsIm9yaWdpbl9qdGkiOiJlYTllNDcxNy00OWM3LTRjNTUtYmU4NC00N2U5MzhiZThkOTMiLCJhdWQiOiJxcm05ZTZsMDRoZjRzOGowMzg0bmxpcTAzIiwiZXZlbnRfaWQiOiI2ZDlmYWE3NC03ZjVkLTRiOWEtODBlMy0yMDVjYWM4NTY3OGIiLCJjdXN0b206bG9naW5fYXR0ZW1wdHMiOiIwIiwiY3VzdG9tOm9uYm9hcmRpbmdfc3RhdGUiOiJ1c2VyLXNpZ25lZC11cCIsInRva2VuX3VzZSI6ImlkIiwiY3VzdG9tOm1wb3NfbGlua2VkIjoiZmFsc2UiLCJhdXRoX3RpbWUiOjE3MzMzNDMxMDgsImV4cCI6MTczMzM0NjcwOCwiaWF0IjoxNzMzMzQzMTA4LCJqdGkiOiI1ZTViZDQ2Mi05OTgwLTQ5ODMtOGZmMS00OTdiMjMxNGJlMjMiLCJlbWFpbCI6IndpeGl2aTkzNDlAY2FudG96aWwuY29tIn0.il6wnhsf8jfjaeKuwumTOrosTeWElEsrcmIY-8HDA4cgD0us4s2btJKXnZpTaq7hFfwOJUqXLeAbFins30B0k8KGW-WziQ8fQqlW7kg3QJLUunQ7J0CWCfYC6XxJeQswzBj1Am4nTAUmlktUN0yX68vbEq_6D8_AI8MRsU0jopXv2QBICff1Vy8JVBy6i741vjUhKh_qhLXlGEzodnH_KJfBGqcirtEdGEcsDmQI7oM9ggAt4sd5m4IIwhayzorJJFkLtOGld8GFv0YGq4nSyxGJjE_mmRnwZm58EUxjj17hNPSs9oPIhCw9AjtuglM83GS26Tz85M-CBwWAPG4how
+1 &gt; Accept: */*
+1 &gt; Host: api-qa.datafast.ec
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.4)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+15:16:30.745 response time in milliseconds: 652
+1 &lt; 200
+1 &lt; Date: Wed, 04 Dec 2024 20:16:29 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Content-Length: 5
+1 &lt; Connection: keep-alive
+1 &lt; x-amzn-RequestId: 338a10b6-cf26-4590-955e-113b8dcc8089
+1 &lt; x-amz-apigw-id: CSHIoFP6IAMEfPQ=
+1 &lt; X-Amzn-Trace-Id: Root=1-6750b89d-643be1242a3827bd04142b4d
+false
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.23">
+      <div class="step-ref passed">23</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.24">
+      <div class="step-ref passed">24</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>print response</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.24">15:16:30.748 [print] false 
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[3:26]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[3:26]</span>
+                <span class="scenario-name">3. Consulta de estado sin registrar los datos de la compra</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>420</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[3:26]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[3:26]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def idtoken1 = &#39;eyJraWQiOiIwOTBKbnBPcUQ3S1FGZHRKcWpRbW1pcUtQYkMwTW9Zb2xnanlmXC9ydWZyND0iLCJhbGciOiJSUzI1NiJ9.eyJjdXN0b206ZGV2aWNlX2lkIjoiZUFfWF9rVEZRSUdDeG40MUxGTGxhVTpBUEE5MWJFd3A3V1RjTnpJODI2dndvcHF3QkMtbUQ2cHZTSW9HTlZyQ1pFNWo3RFktcmpOY2lkSG5ZWVNuOFg2WlI2a0UwNU42R014R2x1aEU2YzBBNjVjVUJJN21USUdCTXFkODdYSjNGcUxKVlNoRlo2S2J4ayIsInN1YiI6Ijc0Yzg3NGE4LTEwZTEtNzAxZi1jZGJlLTIyNmM4YWJiZGZmMSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJjdXN0b206dXNlcl9zdGF0dXMiOiJhY3RpdmUiLCJjdXN0b206bGFzdF9wYXNzd29yZF9jaGFuZ2UiOiIxNzMzMzI4NTExIiwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfOEV5TDkwMDJlIiwiY29nbml0bzp1c2VybmFtZSI6Ijc0Yzg3NGE4LTEwZTEtNzAxZi1jZGJlLTIyNmM4YWJiZGZmMSIsIm9yaWdpbl9qdGkiOiI2ODg4NWYyMS03MjE5LTQ0ZmQtOGM2Yy0zNzgwNjViMDNiYmYiLCJhdWQiOiJxcm05ZTZsMDRoZjRzOGowMzg0bmxpcTAzIiwiZXZlbnRfaWQiOiI4ZDhjNGU3My1mZTE1LTRlNGYtYjY5ZS05YzgzMmJjY2E2ZjAiLCJjdXN0b206bG9naW5fYXR0ZW1wdHMiOiIwIiwiY3VzdG9tOm9uYm9hcmRpbmdfc3RhdGUiOiJtcG9zLXB1cmNoYXNlZCIsInRva2VuX3VzZSI6ImlkIiwiY3VzdG9tOm1wb3NfbGlua2VkIjoiZmFsc2UiLCJhdXRoX3RpbWUiOjE3MzMzNDI5NDYsImV4cCI6MTczMzM0NjU0NiwiaWF0IjoxNzMzMzQyOTQ2LCJqdGkiOiI3NzNlYmZjOC0yZTNiLTQ4OTYtOTY5MS04YzFlNTc1MjE3OTUiLCJlbWFpbCI6Im1pamVubzMzOTlAaWtvd2F0LmNvbSJ9.h3lpschSiBvzqE0H-AkIuwZcHJ5YOziYAaaFRmhVHrJM6GMGmkB-_D8XUFN4sEiJcJey90eelZG4CcJOKPzHhfhupG8syat5ZkyJ4dX6-8y-0mzpEp-OX6PFh3pesRzNGVWRuGsg94729X-yBVqCWCpyNXlSXAxQj6OnvopDWv232mYOIEO1kaU_GUvgexHqRqRKK372G53Xd6DLRKN09UJ3RX7LUfIO5k3mQrJFB-nr_BcTctzCtsKkKAlNxH36Oh8KngfHf3kJCHwTEH3iGDk43hhmj-hcBTZU_wg4C-QGi81u7n9WaoRP4EPK5OGV52wfmMnl0J-rN-gZl0-UYw&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:26]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def idtoken2 = &#39;eyJraWQiOiIwOTBKbnBPcUQ3S1FGZHRKcWpRbW1pcUtQYkMwTW9Zb2xnanlmXC9ydWZyND0iLCJhbGciOiJSUzI1NiJ9.eyJjdXN0b206ZGV2aWNlX2lkIjoiZUFfWF9rVEZRSUdDeG40MUxGTGxhVTpBUEE5MWJFd3A3V1RjTnpJODI2dndvcHF3QkMtbUQ2cHZTSW9HTlZyQ1pFNWo3RFktcmpOY2lkSG5ZWVNuOFg2WlI2a0UwNU42R014R2x1aEU2YzBBNjVjVUJJN21USUdCTXFkODdYSjNGcUxKVlNoRlo2S2J4ayIsInN1YiI6ImE0NTgyNGY4LTkwMDEtNzAyYi0zYTY4LTFmMWVjY2NiMWE4NiIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJjdXN0b206dXNlcl9zdGF0dXMiOiJhY3RpdmUiLCJjdXN0b206bGFzdF9wYXNzd29yZF9jaGFuZ2UiOiIxNzMzMzM1NjE0IiwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfOEV5TDkwMDJlIiwiY29nbml0bzp1c2VybmFtZSI6ImE0NTgyNGY4LTkwMDEtNzAyYi0zYTY4LTFmMWVjY2NiMWE4NiIsIm9yaWdpbl9qdGkiOiJlYTllNDcxNy00OWM3LTRjNTUtYmU4NC00N2U5MzhiZThkOTMiLCJhdWQiOiJxcm05ZTZsMDRoZjRzOGowMzg0bmxpcTAzIiwiZXZlbnRfaWQiOiI2ZDlmYWE3NC03ZjVkLTRiOWEtODBlMy0yMDVjYWM4NTY3OGIiLCJjdXN0b206bG9naW5fYXR0ZW1wdHMiOiIwIiwiY3VzdG9tOm9uYm9hcmRpbmdfc3RhdGUiOiJ1c2VyLXNpZ25lZC11cCIsInRva2VuX3VzZSI6ImlkIiwiY3VzdG9tOm1wb3NfbGlua2VkIjoiZmFsc2UiLCJhdXRoX3RpbWUiOjE3MzMzNDMxMDgsImV4cCI6MTczMzM0NjcwOCwiaWF0IjoxNzMzMzQzMTA4LCJqdGkiOiI1ZTViZDQ2Mi05OTgwLTQ5ODMtOGZmMS00OTdiMjMxNGJlMjMiLCJlbWFpbCI6IndpeGl2aTkzNDlAY2FudG96aWwuY29tIn0.il6wnhsf8jfjaeKuwumTOrosTeWElEsrcmIY-8HDA4cgD0us4s2btJKXnZpTaq7hFfwOJUqXLeAbFins30B0k8KGW-WziQ8fQqlW7kg3QJLUunQ7J0CWCfYC6XxJeQswzBj1Am4nTAUmlktUN0yX68vbEq_6D8_AI8MRsU0jopXv2QBICff1Vy8JVBy6i741vjUhKh_qhLXlGEzodnH_KJfBGqcirtEdGEcsDmQI7oM9ggAt4sd5m4IIwhayzorJJFkLtOGld8GFv0YGq4nSyxGJjE_mmRnwZm58EUxjj17hNPSs9oPIhCw9AjtuglM83GS26Tz85M-CBwWAPG4how&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:26]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.6">
+      <div class="step-ref bg-step">6</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def idtoken3 = &#39;eyJraWQiOiIwOTBKbnBPcUQ3S1FGZHRKcWpRbW1pcUtQYkMwTW9Zb2xnanlmXC9ydWZyND0iLCJhbGciOiJSUzI1NiJ9.eyJjdXN0b206ZGV2aWNlX2lkIjoiZUFfWF9rVEZRSUdDeG40MUxGTGxhVTpBUEE5MWJFd3A3V1RjTnpJODI2dndvcHF3QkMtbUQ2cHZTSW9HTlZyQ1pFNWo3RFktcmpOY2lkSG5ZWVNuOFg2WlI2a0UwNU42R014R2x1aEU2YzBBNjVjVUJJN21USUdCTXFkODdYSjNGcUxKVlNoRlo2S2J4ayIsInN1YiI6IjA0NDgzNDc4LWIwNjEtNzA4My0wMzlhLTIxM2ZjMGRkNGYyYSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJjdXN0b206dXNlcl9zdGF0dXMiOiJhY3RpdmUiLCJjdXN0b206bGFzdF9wYXNzd29yZF9jaGFuZ2UiOiIxNzMzMzQyNTcxIiwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfOEV5TDkwMDJlIiwiY29nbml0bzp1c2VybmFtZSI6IjA0NDgzNDc4LWIwNjEtNzA4My0wMzlhLTIxM2ZjMGRkNGYyYSIsIm9yaWdpbl9qdGkiOiJjODFkYzY2Ni0yM2ZjLTRhNzYtOWU2YS0zNGUwNTAyMzRlODIiLCJhdWQiOiJxcm05ZTZsMDRoZjRzOGowMzg0bmxpcTAzIiwiZXZlbnRfaWQiOiI1MTA1ZjcwOS1hYTAzLTRhZWMtODVhMC0wOWM5OTFkYzZkMWMiLCJjdXN0b206bG9naW5fYXR0ZW1wdHMiOiIwIiwiY3VzdG9tOm9uYm9hcmRpbmdfc3RhdGUiOiJ1c2VyLXNpZ25lZC11cCIsInRva2VuX3VzZSI6ImlkIiwiY3VzdG9tOm1wb3NfbGlua2VkIjoiZmFsc2UiLCJhdXRoX3RpbWUiOjE3MzMzNDI2NjYsImV4cCI6MTczMzM0NjI2NiwiaWF0IjoxNzMzMzQyNjY2LCJqdGkiOiI3OTk3NTRlZS05MjEzLTRmYWItOTk1NC1iZmQ2OGVjNDg1MTMiLCJlbWFpbCI6ImNvbGVuZW40ODJAY2FudG96aWwuY29tIn0.UBxryxRqVZegpkUq4qJg50E2Lh8ONoxcBGb9_-QKGprwxD9SJu7e9fyVQ6JiyPmGr-ZBlABa3xQcjnpYSa0duFCbnDHgZfOX3Ck24rjh_OKEJpn7c_ko38yJ9Y9WG2cRQxwgXx40Dc0Qn8LKAceeMSh6ol2tav8I_W1SzAnLC8gJ6r8ySX6yrXh0-bM27XaVSROmblyxu7hJZ0uDhxNCMS6g2FFno0C7g61JGl8fS5AQLVwYLgHAYpe9ruc98oRQ7d51WFiUzizQH_Rx2vbOdcbH9XEa1epNYWoOJSP8sufNw_YU0TisccBf4odOEllsmDFzURPX6dDksxAK5fzz4Q&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.27">
+      <div class="step-ref passed">27</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &#39;https://api-qa.datafast.ec&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.28">
+      <div class="step-ref passed">28</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>path &quot;mpos&quot;,&quot;api&quot;,&quot;v1&quot;,&quot;purchase&quot;,&quot;isPaymentSuccess&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.29">
+      <div class="step-ref passed">29</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Authorization = idtoken3</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.30">
+      <div class="step-ref passed">30</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Accept = &#39;*/*&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.31">
+      <div class="step-ref passed">31</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">412</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.31">15:16:30.774 request:
+1 &gt; GET https://api-qa.datafast.ec/mpos/api/v1/purchase/isPaymentSuccess
+1 &gt; Authorization: eyJraWQiOiIwOTBKbnBPcUQ3S1FGZHRKcWpRbW1pcUtQYkMwTW9Zb2xnanlmXC9ydWZyND0iLCJhbGciOiJSUzI1NiJ9.eyJjdXN0b206ZGV2aWNlX2lkIjoiZUFfWF9rVEZRSUdDeG40MUxGTGxhVTpBUEE5MWJFd3A3V1RjTnpJODI2dndvcHF3QkMtbUQ2cHZTSW9HTlZyQ1pFNWo3RFktcmpOY2lkSG5ZWVNuOFg2WlI2a0UwNU42R014R2x1aEU2YzBBNjVjVUJJN21USUdCTXFkODdYSjNGcUxKVlNoRlo2S2J4ayIsInN1YiI6IjA0NDgzNDc4LWIwNjEtNzA4My0wMzlhLTIxM2ZjMGRkNGYyYSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJjdXN0b206dXNlcl9zdGF0dXMiOiJhY3RpdmUiLCJjdXN0b206bGFzdF9wYXNzd29yZF9jaGFuZ2UiOiIxNzMzMzQyNTcxIiwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfOEV5TDkwMDJlIiwiY29nbml0bzp1c2VybmFtZSI6IjA0NDgzNDc4LWIwNjEtNzA4My0wMzlhLTIxM2ZjMGRkNGYyYSIsIm9yaWdpbl9qdGkiOiJjODFkYzY2Ni0yM2ZjLTRhNzYtOWU2YS0zNGUwNTAyMzRlODIiLCJhdWQiOiJxcm05ZTZsMDRoZjRzOGowMzg0bmxpcTAzIiwiZXZlbnRfaWQiOiI1MTA1ZjcwOS1hYTAzLTRhZWMtODVhMC0wOWM5OTFkYzZkMWMiLCJjdXN0b206bG9naW5fYXR0ZW1wdHMiOiIwIiwiY3VzdG9tOm9uYm9hcmRpbmdfc3RhdGUiOiJ1c2VyLXNpZ25lZC11cCIsInRva2VuX3VzZSI6ImlkIiwiY3VzdG9tOm1wb3NfbGlua2VkIjoiZmFsc2UiLCJhdXRoX3RpbWUiOjE3MzMzNDI2NjYsImV4cCI6MTczMzM0NjI2NiwiaWF0IjoxNzMzMzQyNjY2LCJqdGkiOiI3OTk3NTRlZS05MjEzLTRmYWItOTk1NC1iZmQ2OGVjNDg1MTMiLCJlbWFpbCI6ImNvbGVuZW40ODJAY2FudG96aWwuY29tIn0.UBxryxRqVZegpkUq4qJg50E2Lh8ONoxcBGb9_-QKGprwxD9SJu7e9fyVQ6JiyPmGr-ZBlABa3xQcjnpYSa0duFCbnDHgZfOX3Ck24rjh_OKEJpn7c_ko38yJ9Y9WG2cRQxwgXx40Dc0Qn8LKAceeMSh6ol2tav8I_W1SzAnLC8gJ6r8ySX6yrXh0-bM27XaVSROmblyxu7hJZ0uDhxNCMS6g2FFno0C7g61JGl8fS5AQLVwYLgHAYpe9ruc98oRQ7d51WFiUzizQH_Rx2vbOdcbH9XEa1epNYWoOJSP8sufNw_YU0TisccBf4odOEllsmDFzURPX6dDksxAK5fzz4Q
+1 &gt; Accept: */*
+1 &gt; Host: api-qa.datafast.ec
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.4)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+15:16:31.155 response time in milliseconds: 381
+1 &lt; 500
+1 &lt; Date: Wed, 04 Dec 2024 20:16:30 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Content-Length: 83
+1 &lt; Connection: keep-alive
+1 &lt; x-amzn-RequestId: 1e895d1b-b422-45dc-a932-29ad9b5bee0f
+1 &lt; x-amz-apigw-id: CSHIvHSFIAMEI-w=
+1 &lt; X-Amzn-Trace-Id: Root=1-6750b89d-1fbe07ad74d7909a2899d08d
+{&quot;code&quot;:&quot;MPOS014&quot;,&quot;message&quot;:&quot;There is no mpos information for the current userId.&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.32">
+      <div class="step-ref passed">32</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 500</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.33">
+      <div class="step-ref passed">33</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>print response</span>
+      </div>
+    </div>
+    <div class="time-cell passed">4</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.33">15:16:31.188 [print] {
+  &quot;code&quot;: &quot;MPOS014&quot;,
+  &quot;message&quot;: &quot;There is no mpos information for the current userId.&quot;
+}
+ 
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
